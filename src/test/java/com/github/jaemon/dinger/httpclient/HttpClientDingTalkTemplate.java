@@ -41,9 +41,9 @@ import java.util.List;
 public class HttpClientDingTalkTemplate {
 
     public static void main(String[] args) throws Exception {
-        String tokenId="5ba9b9232rede0e13b87dd6ef90f1fbcfd5e42a81966d1ds441dcec85ddsds10";
+        String tokenId = "fb84492a906fc57c70e5efb885fef0155b78f12aee42d66e6a7b16f692dfedad";
         StringBuilder url = new StringBuilder("https://oapi.dingtalk.com/robot/send?access_token=");
-        String secret = "AEQ520acbce5db4af557323db5af55d41ee780412efg370b1c1a2f66535f6313255";
+        String secret = "SECca136bff93886b8be2c132f1190410e87d9c99d1acbcaead97e54e66bbc3f929";
         Long timestamp = System.currentTimeMillis();
         String sign = algorithm(timestamp, secret);
         url.append(tokenId).append("&").append("sign=").append(sign)
@@ -61,7 +61,6 @@ public class HttpClientDingTalkTemplate {
         RestTemplate restTemplate = new RestTemplate();
         String response = restTemplate.postForObject(url.toString(), request, String.class);
         System.out.println(response);
-
     }
 
     private static String algorithm(Long timestamp, String secret) throws Exception {

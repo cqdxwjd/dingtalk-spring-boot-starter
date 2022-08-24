@@ -32,11 +32,12 @@ import java.util.List;
  */
 public class HttpClientTemplate {
     public static void main(String[] args) {
-        String url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=32864966-7082-46d5-8a39-2fe7d3b6df89";
+        String url = "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=29668813-937c-41ab-8b27-bcfa7e8acad9";
         WeText.Text text = new WeText.Text("Hello Dinger");
         WeText weText = new WeText(text);
         List<String> mobiles = new ArrayList<>();
-        mobiles.add("13520201220");
+        mobiles.add("15730266261");
+//        mobiles.add("@all");
         text.setMentioned_mobile_list(mobiles);
 
         HttpHeaders headers = new HttpHeaders();
